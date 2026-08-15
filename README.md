@@ -1,0 +1,20 @@
+# 联掌门户一键开门（Scriptable）
+
+这是一个面向个人设备的技术整理项目：记录如何在已获授权的账号、手机和门禁上，通过 Scriptable 发送联掌门户开门请求。
+
+## 安全说明
+
+本仓库只包含脱敏后的实现说明和模板，**不包含**真实 token、openid、签名、手机号、IMEI、门禁序列号、抓包文件或初始化配置。
+
+请只在自己拥有或明确获授权的账号、设备和门禁上使用。不要把认证材料提交到 GitHub；认证材料应保存在 iPhone 的 Scriptable Keychain 中。
+
+## 文档
+
+- [技术实现说明](docs/implementation.md)
+- [安全与脱敏清单](docs/security.md)
+- [Scriptable 配置模板](scriptable/config.example.js)
+- [Scriptable 请求模板](scriptable/opendoor.example.js)
+
+## 使用边界
+
+接口路径、端口、请求头和字段名可能随联掌门户版本或服务端调整而变化。模板中的占位符必须替换为你自己抓取并核验的值；本仓库不提供任何可直接用于他人门禁的凭据。
