@@ -18,11 +18,11 @@
 - [安全与脱敏清单](docs/security.md)
 - [Scriptable 配置模板](scriptable/config.example.js)
 - [Scriptable 请求模板](scriptable/opendoor.example.js)
-- [天气开门小组件](scriptable/联掌门户-天气开门小组件.js)
+- [天气开门小组件](联掌门户-天气开门小组件.js)
 
 ## 天气开门小组件
 
-新增脚本 scriptable/联掌门户-天气开门小组件.js，保留原有的联掌门户开门请求逻辑，并增加天气展示：
+新增脚本 联掌门户-天气开门小组件.js，保留原有的联掌门户开门请求逻辑，并增加天气展示：
 
 - 读取 iPhone 定位，显示定位所在城市的当前天气、天气图标、温度、体感温度和湿度。
 - 以 30 分钟为目标刷新天气；实际刷新时间由 iOS/Scriptable 的小组件调度决定。
