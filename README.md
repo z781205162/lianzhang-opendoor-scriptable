@@ -18,6 +18,26 @@
 - [安全与脱敏清单](docs/security.md)
 - [Scriptable 配置模板](scriptable/config.example.js)
 - [Scriptable 请求模板](scriptable/opendoor.example.js)
+- [天气开门小组件](scriptable/联掌门户-天气开门小组件.js)
+
+## 天气开门小组件
+
+新增脚本 scriptable/联掌门户-天气开门小组件.js，保留原有的联掌门户开门请求逻辑，并增加天气展示：
+
+- 读取 iPhone 定位，显示定位所在城市的当前天气、天气图标、温度、体感温度和湿度。
+- 以 30 分钟为目标刷新天气；实际刷新时间由 iOS/Scriptable 的小组件调度决定。
+- 点击整个小组件调用开门请求；接口返回成功后发送“联掌门户 / 开门成功”本地通知。
+- 天气数据使用 Open-Meteo，不需要额外天气 API Key。
+- 天气缓存和位置缓存保存在 Scriptable 本地文件中；个人配置仍只从 Scriptable Keychain 读取。
+
+### 使用方法
+
+1. 使用个人的未公开配置初始化脚本写入 Scriptable Keychain，初始化脚本不要上传 GitHub。
+2. 导入天气开门脚本，允许 Scriptable 使用定位并发送通知。
+3. 手动运行一次脚本，完成定位和天气缓存。
+4. 添加 Scriptable 小组件并选择该脚本；点击小组件即可发起开门请求。
+
+开门测试前请关闭 iPhone 上用于抓包的 HTTP 代理。仓库只提供脱敏模板，不包含任何可直接使用的个人凭据。
 
 ## 使用边界
 
